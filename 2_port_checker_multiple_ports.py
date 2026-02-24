@@ -16,9 +16,14 @@ def check_port(ip, port):
     # Use an 'if' statement here:
     # If result is 0, print "Port is open!"
     # Otherwise, print "Port is closed."
+    if result == 0:
+        print("Portal is open!")
+    else:
+        print("The portal is closed.")
     
     # 4. Always close the connection
     s.close()
 
 # Test it on Google's web server (IP: 8.8.8.8, Port: 80)
-check_port("8.8.8.8", 80)
+for port in range(20,26):
+    check_port("8.8.8.8", port)
